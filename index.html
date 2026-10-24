@@ -11,102 +11,138 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="bar">
+    <a href="#" class="mark">GB</a>
+    <nav>
+      <a href="#progetti">Progetti</a>
+      <a href="#formazione">Formazione</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <span class="clock mono" aria-label="Ora in Italia"><span class="dot"></span><span id="clock">--:--</span> IT</span>
+  </header>
+
   <main>
-    <header class="intro">
-      <h1>Giulio Boscaro</h1>
-      <p class="role">Digital advertising</p>
-      <p class="bio">
-        Lavoro nel marketing digitale. Con
-        <a href="https://swotstudios.com" target="_blank" rel="noopener">SWOT Studios</a>
-        offro servizi di advertising alle imprese: campagne, siti ed e-commerce.
-        In parallelo porto avanti progetti miei.
-      </p>
-    </header>
-
-    <section>
-      <h2>Progetti</h2>
-      <ul class="list">
-        <li>
-          <a href="https://swotstudios.com" target="_blank" rel="noopener">
-            <span class="name">SWOT Studios</span>
-            <span class="desc">Servizi di digital advertising per imprese</span>
-            <span class="arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://iocripto.com" target="_blank" rel="noopener">
-            <span class="name">IO Cripto</span>
-            <span class="desc">Testata online in italiano sulle criptovalute</span>
-            <span class="arrow" aria-hidden="true">↗</span>
-          </a>
-        </li>
-        <li>
-          <a href="#itsmyromeo">
-            <span class="name">itsmyromeo</span>
-            <span class="desc">E-commerce · progetto concluso</span>
-            <span class="arrow" aria-hidden="true">↓</span>
-          </a>
-        </li>
-      </ul>
+    <!-- HERO -->
+    <section class="hero">
+      <p class="label mono reveal">Digital advertising</p>
+      <h1 class="reveal">
+        <span>Giulio</span>
+        <span>Boscaro<span class="accent">.</span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="bio reveal">
+          Lavoro nel marketing digitale. Con
+          <a href="https://swotstudios.com" target="_blank" rel="noopener">SWOT Studios</a>
+          offro servizi di advertising alle imprese: campagne, siti ed e-commerce.
+          In parallelo porto avanti progetti miei.
+        </p>
+        <a href="#progetti" class="scroll mono reveal" aria-label="Vai ai progetti">↓</a>
+      </div>
     </section>
 
-    <section id="itsmyromeo" class="case">
-      <h2>itsmyromeo</h2>
-      <p>
-        Un e-commerce che ho lanciato a 20 anni. È stato il mio primo progetto
-        seguito dall'inizio alla fine, e mi ha costretto a imparare ogni parte
-        del lavoro:
-      </p>
-      <ul class="skills">
-        <li>Advertising e acquisizione clienti</li>
-        <li>Shooting e contenuti</li>
-        <li>Ricerca e trattativa con fornitori asiatici</li>
-        <li>Studio e sviluppo del packaging</li>
-        <li>Miglioramento del prodotto</li>
-        <li>Logistica e spedizioni</li>
-      </ul>
-      <p>
-        Oggi il progetto è chiuso, ma molto di come lavoro viene da lì.
-      </p>
-      <p class="links">
-        <a href="https://www.harpersbazaar.com/it/cultura/costume/a39582078/itsmyromeo-cos-e-violenza-sulle-donne/" target="_blank" rel="noopener">Ne ha parlato Harper's Bazaar Italia ↗</a>
-        <a href="https://www.instagram.com/itsmyromeofficial/" target="_blank" rel="noopener">Instagram ↗</a>
-      </p>
-    </section>
+    <!-- PROGETTI -->
+    <section id="progetti" class="section">
+      <div class="section-head reveal">
+        <h2 class="label mono">Progetti</h2>
+        <span class="count mono">03</span>
+      </div>
 
-    <section>
-      <h2>Formazione</h2>
-      <ul class="list">
-        <li>
-          <div class="row">
-            <span class="name">IUSVE</span>
-            <span class="desc">Laurea triennale in Digital Marketing</span>
-            <span class="when">Venezia</span>
-          </div>
+      <ul class="projects">
+        <li class="reveal">
+          <a href="https://swotstudios.com" target="_blank" rel="noopener" class="project" data-cursor="Visita">
+            <span class="num mono">01</span>
+            <span class="p-name">SWOT Studios</span>
+            <span class="p-desc">Servizi di digital advertising per imprese</span>
+            <span class="p-tag mono">Agenzia</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </a>
         </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contatti</h2>
-      <ul class="list">
-        <li>
-          <a href="mailto:giulio@swotstudios.com">
-            <span class="name">Email</span>
-            <span class="desc">giulio@swotstudios.com</span>
-            <span class="arrow" aria-hidden="true">↗</span>
+        <li class="reveal">
+          <a href="https://iocripto.com" target="_blank" rel="noopener" class="project" data-cursor="Visita">
+            <span class="num mono">02</span>
+            <span class="p-name">IO Cripto</span>
+            <span class="p-desc">Testata online in italiano sulle criptovalute</span>
+            <span class="p-tag mono">Editoria</span>
+            <span class="p-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="#itsmyromeo" class="project" data-cursor="Leggi">
+            <span class="num mono">03</span>
+            <span class="p-name">itsmyromeo</span>
+            <span class="p-desc">E-commerce lanciato a 20 anni</span>
+            <span class="p-tag mono">Concluso</span>
+            <span class="p-arrow" aria-hidden="true">↓</span>
           </a>
         </li>
       </ul>
     </section>
 
-    <footer>© <span id="year">2026</span> Giulio Boscaro</footer>
+    <!-- ITSMYROMEO -->
+    <section id="itsmyromeo" class="section case">
+      <div class="section-head reveal">
+        <h2 class="label mono">Caso · itsmyromeo</h2>
+      </div>
+
+      <div class="case-grid">
+        <div class="case-text reveal">
+          <p class="case-lead">
+            Il mio primo progetto seguito dall'inizio alla fine. Un e-commerce
+            che mi ha costretto a imparare ogni parte del lavoro.
+          </p>
+          <p>
+            Oggi è chiuso, ma molto di come lavoro viene da lì.
+          </p>
+          <p class="links">
+            <a href="https://www.harpersbazaar.com/it/cultura/costume/a39582078/itsmyromeo-cos-e-violenza-sulle-donne/" target="_blank" rel="noopener">Harper's Bazaar Italia ↗</a>
+            <a href="https://www.instagram.com/itsmyromeofficial/" target="_blank" rel="noopener">Instagram ↗</a>
+          </p>
+        </div>
+
+        <ol class="skills reveal">
+          <li><span class="mono">A</span>Advertising e acquisizione clienti</li>
+          <li><span class="mono">B</span>Shooting e contenuti</li>
+          <li><span class="mono">C</span>Trattativa con fornitori asiatici</li>
+          <li><span class="mono">D</span>Studio e sviluppo del packaging</li>
+          <li><span class="mono">E</span>Miglioramento del prodotto</li>
+          <li><span class="mono">F</span>Logistica e spedizioni</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FORMAZIONE -->
+    <section id="formazione" class="section">
+      <div class="section-head reveal">
+        <h2 class="label mono">Formazione</h2>
+      </div>
+      <div class="edu reveal">
+        <span class="p-name">IUSVE</span>
+        <span class="p-desc">Laurea triennale in Digital Marketing</span>
+        <span class="p-tag mono">Venezia</span>
+      </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section contact">
+      <div class="section-head reveal">
+        <h2 class="label mono">Contatti</h2>
+      </div>
+      <a href="mailto:giulio@swotstudios.com" class="mail reveal">giulio<wbr>@swotstudios.com</a>
+      <button type="button" class="copy mono reveal" data-copy="giulio@swotstudios.com">Copia indirizzo</button>
+    </section>
   </main>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="mono">
+    <span>© <span id="year">2026</span> Giulio Boscaro</span>
+    <a href="#">Torna su ↑</a>
+  </footer>
+
+  <div class="cursor mono" aria-hidden="true"></div>
+
+  <script src="main.js"></script>
 </body>
 </html>
