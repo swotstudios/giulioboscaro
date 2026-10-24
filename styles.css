@@ -18,6 +18,8 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   background: var(--bg);
@@ -106,6 +108,39 @@ h2 {
   transform: translate(2px, -2px);
 }
 
+/* itsmyromeo */
+.case p { margin: 0 0 16px; max-width: 520px; }
+
+.skills {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 24px;
+  color: var(--muted);
+}
+
+.skills li::before {
+  content: "—";
+  margin-right: 8px;
+  color: var(--line);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.links a {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: border-color .15s;
+}
+
+.links a:hover { border-color: var(--fg); }
+
 footer {
   margin-top: 96px;
   color: var(--muted);
@@ -123,4 +158,6 @@ footer {
 
   .desc { grid-column: 1; grid-row: 2; }
   .arrow, .when { grid-column: 2; grid-row: 1; }
+
+  .skills { grid-template-columns: 1fr; }
 }
