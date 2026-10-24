@@ -229,6 +229,56 @@ h1 > span { display: block; }
 .project:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); }
 .project[href^="#"]:hover .p-arrow { transform: translateY(4px); }
 
+/* attività */
+.business {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 40px;
+  padding: 44px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.business::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(var(--pad) * -1);
+  background: var(--surface);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .45s var(--ease);
+  z-index: -1;
+}
+
+.business:hover::before { transform: scaleY(1); }
+
+.b-name {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: clamp(44px, 7vw, 96px);
+  font-weight: 500;
+  letter-spacing: -.05em;
+  line-height: .9;
+}
+
+.b-name .p-arrow { font-size: .4em; margin-top: .1em; }
+.business:hover .p-arrow { color: var(--accent); transform: translate(3px, -3px); }
+
+.b-desc {
+  display: block;
+  font-size: 18px;
+  line-height: 1.45;
+  max-width: 440px;
+}
+
+.b-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+
 /* caso itsmyromeo */
 .case-grid {
   display: grid;
@@ -367,6 +417,7 @@ footer a:hover { color: var(--fg); }
   .project { grid-template-columns: 40px 1fr auto 24px; }
   .project .p-desc { grid-column: 2 / -1; grid-row: 2; margin-top: -12px; }
   .case-grid { grid-template-columns: 1fr; gap: 40px; }
+  .business { grid-template-columns: 1fr; gap: 24px; }
 }
 
 /* mobile */
@@ -381,10 +432,9 @@ footer a:hover { color: var(--fg); }
 
   .section { padding-top: 88px; }
 
-  .project { grid-template-columns: 1fr auto; gap: 16px; padding: 22px 0; }
+  .project { grid-template-columns: 1fr auto auto; gap: 12px; padding: 22px 0; }
   .project .num { display: none; }
-  .project .p-desc { grid-column: 1 / -1; margin-top: -8px; }
-  .project .p-tag { display: none; }
+  .project .p-desc { grid-column: 1 / -1; grid-row: 2; margin-top: -4px; }
 
   .edu { grid-template-columns: 1fr auto; gap: 8px 16px; }
   .edu .p-desc { grid-column: 1 / -1; grid-row: 2; }
