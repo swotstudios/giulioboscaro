@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    { "source": "/((?!favicon\\.svg$).*)", "destination": "/manutenzione.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+    }
+  ]
+}
